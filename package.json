@@ -35,6 +35,7 @@
     "flow": "flow"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "chai": "^4.1.2",
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",

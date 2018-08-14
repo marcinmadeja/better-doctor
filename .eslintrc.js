@@ -6,8 +6,10 @@ module.exports = {
       "jest": true
     },
     "plugins": [
-      "react"
+      "react",
+      "flowtype"
     ],
+    "parser": "babel-eslint",
     "settings": {
       "import/resolver": {
         "node": { "paths": [ "./src/" ] }
