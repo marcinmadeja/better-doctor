@@ -1,1 +1,4 @@
-export const TOGGLE_NAV = '@@auth/TOGGLE_NAV';
+// @flow strict
+export const TOGGLE_NAV: string = '@@auth/TOGGLE_NAV';
+
+export type Action = { type: typeof TOGGLE_NAV, payload: ?boolean, };
