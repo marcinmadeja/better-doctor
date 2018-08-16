@@ -21,7 +21,7 @@ module.exports = {
       renderer: true,
       render: true,
     },
-    "extends": ["airbnb"],
+    "extends": ["airbnb", "plugin:flowtype/recommended"],
     "rules": {
       "react/prop-types": 1,
       "arrow-body-style": 0,
@@ -65,6 +65,7 @@ module.exports = {
       "react/sort-comp": 0,
       "function-paren-newline": 0,
       "import/no-extraneous-dependencies": 0,
-      "import/no-named-as-default": 0
+      "import/no-named-as-default": 0,
+      "react/destructuring-assignment": 0
     }
   }
