@@ -1,9 +1,9 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
+import 'normalize.css';
 
 import configureStore from './redux/store';
 import Root from './Root/Root';
