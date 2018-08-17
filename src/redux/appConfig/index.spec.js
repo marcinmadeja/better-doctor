@@ -11,7 +11,7 @@ describe('appConfig reducer', () => {
       type: types.TOGGLE_NAV,
     })).toEqual({
       ...initialState,
-      navOpen: true,
+      navOpen: !initialState.navOpen,
     });
 
     expect(reducer(initialState, {
