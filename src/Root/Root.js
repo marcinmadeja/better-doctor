@@ -16,6 +16,7 @@ const Root = () => {
             key={route.path}
             path={route.path}
             render={route.component}
+            exact={route.exact}
           />
         ))}
       </PageContent>
