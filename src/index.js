@@ -5,7 +5,7 @@ import { Router } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import 'normalize.css';
 
-import configureStore from './redux/store';
+import configureStore from './redux-modules/store';
 import Root from './Root/Root';
 import registerServiceWorker from './registerServiceWorker';
 

@@ -4,12 +4,12 @@ import { SIDEBAR_WIDTH } from 'constants/index';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
-const styles = () => ({
+const styles = {
   drawerPaper: {
     position: 'relative',
     width: SIDEBAR_WIDTH,
   },
-});
+};
 
 type Props = {
   classes: {
