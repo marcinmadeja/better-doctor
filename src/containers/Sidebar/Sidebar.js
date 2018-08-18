@@ -4,6 +4,9 @@ import { SIDEBAR_WIDTH } from 'constants/index';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
+import { mainRoutes } from 'routes/routes';
+import Menu from './Menu';
+
 const styles = {
   drawerPaper: {
     position: 'relative',
@@ -29,7 +32,7 @@ class Sidebar extends React.Component<Props> {
         }}
         open
       >
-        drawer
+        <Menu list={mainRoutes} />
       </Drawer>
     );
   }
