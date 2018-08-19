@@ -11,7 +11,11 @@ const Menu = ({ list }: Props) => {
   return (
     <Navigation>
       {list.map(route => (
-        <Navigation.Item key={route.path} icon={route.icon}>
+        <Navigation.Item
+          key={route.path}
+          icon={route.icon}
+          path={route.path}
+        >
           {route.name}
         </Navigation.Item>
       ))}

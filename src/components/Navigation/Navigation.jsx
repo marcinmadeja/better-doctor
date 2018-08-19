@@ -14,7 +14,7 @@ class Navigation extends React.Component<Props> {
     const { children } = this.props;
 
     return (
-      <MenuList>
+      <MenuList component="div">
         {children}
       </MenuList>
     );
