@@ -1,13 +1,32 @@
 // @flow strict
 import * as React from 'react';
 import type { Route } from 'routes/routes';
+import { withStyles } from '@material-ui/core';
+import { THEME_COLORS } from 'constants/index';
 import Navigation from 'components/Navigation/Navigation';
 
 type Props = {
   list: Array<Route>,
+  classes: { [string]: string }
 }
 
-const Menu = ({ list }: Props) => {
+const styles = {
+  navItem: {
+    color: THEME_COLORS.darkColorText,
+    '& svg': {
+      color: THEME_COLORS.darkColorText,
+    },
+
+    '&.active': {
+      color: THEME_COLORS.darkContrast,
+      '& svg': {
+        color: THEME_COLORS.darkContrast,
+      },
+    },
+  },
+};
+
+const Menu = ({ list, classes }: Props) => {
   return (
     <Navigation>
       {list.map(route => (
@@ -15,6 +34,7 @@ const Menu = ({ list }: Props) => {
           key={route.path}
           icon={route.icon}
           path={route.path}
+          className={classes.navItem}
         >
           {route.name}
         </Navigation.Item>
@@ -23,4 +43,4 @@ const Menu = ({ list }: Props) => {
   );
 };
 
-export default Menu;
+export default withStyles(styles)(Menu);

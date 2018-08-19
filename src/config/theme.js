@@ -41,8 +41,8 @@ const PRIMARY_COLORS = {
 
 const DARK_COLORS: { [string]: string } = {
   main: '#22262e',
-  mainText: '#8b91a0',
-  mainTextActive: '#ffffff',
+  text: '#8b91a0',
+  contrast: '#ffffff',
   lighter: '#22262e',
 };
 
@@ -54,6 +54,8 @@ const theme = createMuiTheme({
 export const COLORS: { [string]: string } = {
   primaryColor: theme.palette.primary[500],
   darkColor: DARK_COLORS.main,
+  darkContrast: DARK_COLORS.contrast,
+  darkColorText: DARK_COLORS.text,
 };
 
 export const SHADOWS = theme.shadows;

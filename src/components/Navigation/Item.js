@@ -1,5 +1,6 @@
 // @flow strict
 import * as React from 'react';
+import classnames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
@@ -14,12 +15,7 @@ const StyledIcon = styled.span`
 
 const styles = {
   menuItem: {
-    '&.active': {
-      color: 'red',
-      '& svg': {
-        color: 'red',
-      },
-    },
+
   },
 };
 
@@ -27,14 +23,23 @@ type Props = {
   icon: React.Node,
   children: React.Node,
   path: string,
+  className?: string,
   classes: {
     menuItem: string
   }
 };
 
-const Item = ({ icon, path, children, classes }: Props) => {
+const Item = ({ icon, path, children, className, classes }: Props) => {
+  const c_className: string = className || '';
+  const componentClasses = classnames(classes.menuItem, { [c_className]: className });
+
   return (
-    <MenuItem component={NavLink} to={path} className={classes.menuItem}>
+    <MenuItem
+      to={path}
+      exact
+      component={NavLink}
+      className={componentClasses}
+    >
       <ListItemIcon>
         <StyledIcon>
           {icon}
@@ -44,6 +49,10 @@ const Item = ({ icon, path, children, classes }: Props) => {
       {children}
     </MenuItem>
   );
+};
+
+Item.defaultProps = {
+  className: '',
 };
 
 export default withStyles(styles)(Item);
