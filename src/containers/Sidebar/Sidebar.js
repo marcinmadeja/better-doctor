@@ -35,6 +35,7 @@ class Sidebar extends React.Component<Props> {
         open
       >
         <User />
+
         <Menu list={mainRoutes} />
       </Drawer>
     );

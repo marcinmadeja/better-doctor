@@ -1,11 +1,11 @@
 import React from 'react';
 
-const LeastLiked = () => {
+const Specialties = () => {
   return (
     <div>
-      LeastLiked
+      Specialties
     </div>
   );
 };
 
-export default LeastLiked;
+export default Specialties;

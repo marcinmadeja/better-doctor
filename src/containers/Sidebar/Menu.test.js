@@ -1,20 +1,31 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router';
-import Item from './Item';
+import Menu from './Menu';
 
-const defaultProps = {
-  icon: <p />,
-  path: '',
-  children: '',
-  className: '',
-};
+const defaultProps = {};
+const List = [
+  {
+    exact: true,
+    path: '/',
+    component: () => <div />,
+    name: 'Home',
+    icon: <span />,
+  },
+  {
+    exact: true,
+    path: '/home',
+    component: () => <div />,
+    name: 'Home 2',
+    icon: <span />,
+  },
+];
 
 const setup = (props = {}) => {
   props = { ...defaultProps, ...props };
   const actions = {};
   const component = (
     <MemoryRouter initialEntries={['/']}>
-      <Item {...actions} {...props} />
+      <Menu {...actions} {...props} />
     </MemoryRouter>
   );
   const shallowComponent = shallow(component);
@@ -26,18 +37,14 @@ const setup = (props = {}) => {
   };
 };
 
-describe('Item', () => {
+describe('Menu', () => {
   it('should render', () => {
     const { shallowComponent } = setup();
     expect(shallowComponent.exists()).toBe(true);
   });
 
-  it('should match base snapshot', () => {
-    const { component } = setup({
-      children: 'Lorem ipsum',
-      path: 'example/path',
-      className: 'example class name',
-    });
+  it('should render correctly when proper List passed', () => {
+    const { component } = setup({ list: List });
 
     const tree = renderer
       .create(component)

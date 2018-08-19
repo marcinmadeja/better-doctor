@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render correctly when proper List passed 1`] = `
+<div
+  className="MuiList-root-2 MuiList-padding-3"
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  role="menu"
+>
+  <a
+    aria-current="page"
+    className="MuiButtonBase-root-18 MuiListItem-root-8 MuiListItem-default-11 MuiListItem-gutters-15 MuiListItem-button-16 MuiMenuItem-root-6 Menu-navItem-1 active"
+    href="/"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="menuitem"
+    style={Object {}}
+    tabIndex={-1}
+  >
+    <span
+      className="MuiListItemIcon-root-21 sc-bdVaJa gguFeu"
+    >
+      <span />
+    </span>
+    Home
+    <span
+      className="MuiTouchRipple-root-22"
+    />
+  </a>
+  <a
+    aria-current={null}
+    className="MuiButtonBase-root-18 MuiListItem-root-8 MuiListItem-default-11 MuiListItem-gutters-15 MuiListItem-button-16 MuiMenuItem-root-6 Menu-navItem-1"
+    href="/home"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="menuitem"
+    style={undefined}
+    tabIndex={-1}
+  >
+    <span
+      className="MuiListItemIcon-root-21 sc-bdVaJa gguFeu"
+    >
+      <span />
+    </span>
+    Home 2
+    <span
+      className="MuiTouchRipple-root-22"
+    />
+  </a>
+</div>
+`;
