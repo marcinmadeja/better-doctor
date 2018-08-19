@@ -40,23 +40,31 @@ const PRIMARY_COLORS = {
 };
 
 const DARK_COLORS: { [string]: string } = {
-  main: '#22262e',
+  main: '#1b1e24',
   text: '#8b91a0',
   contrast: '#ffffff',
   lighter: '#22262e',
 };
 
+const SUCCESS_COLOR: string = '#0aa699';
+const FAILURE_COLOR: string = '#f35958';
+
 const theme = createMuiTheme({
   primary: PRIMARY_COLORS,
   darkColors: DARK_COLORS,
+  success: SUCCESS_COLOR,
+  failure: FAILURE_COLOR,
 });
 
 export const COLORS: { [string]: string } = {
   primary: theme.palette.primary[500],
   dark: DARK_COLORS.main,
+  darkLighter: DARK_COLORS.lighter,
   darkContrast: DARK_COLORS.contrast,
   darkText: DARK_COLORS.text,
   background: '#e5e9ec',
+  success: SUCCESS_COLOR,
+  failure: FAILURE_COLOR,
 };
 
 export const SHADOWS = theme.shadows;

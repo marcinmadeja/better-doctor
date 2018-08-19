@@ -6,6 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 
 import { mainRoutes } from 'routes/routes';
 import Menu from './Menu';
+import User from './User/User';
 
 const styles = {
   drawerPaper: {
@@ -33,6 +34,7 @@ class Sidebar extends React.Component<Props> {
         }}
         open
       >
+        <User />
         <Menu list={mainRoutes} />
       </Drawer>
     );
