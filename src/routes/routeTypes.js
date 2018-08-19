@@ -7,3 +7,5 @@ export const LEAST_LIKED: string = '/least-liked';
 export const SPECIALTIES: string = '/specialties';
 export const CONDITIONS: string = '/conditions';
 export const INSURANCES: string = '/insurances';
+
+export const ACCOUNT: string = '/account';

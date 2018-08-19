@@ -14,6 +14,7 @@ const styles = {
   navItem: {
     color: THEME_COLORS.darkText,
     '& svg': {
+      width: 22,
       color: THEME_COLORS.darkText,
     },
 

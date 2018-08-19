@@ -1,7 +1,9 @@
 // @flow strict
 import * as React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { USER, GUTTER, THEME_COLORS } from 'constants/index';
+import { ACCOUNT } from 'routes/routeTypes';
 import UserAvatar from './UserAvatar';
 
 const UserWrap = styled.div`
@@ -19,6 +21,11 @@ const Name = styled.div`
   margin-left: 15px;
   color: ${THEME_COLORS.darkContrast};
   letter-spacing: 0.7px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 class User extends React.Component<{}> {
@@ -33,9 +40,11 @@ class User extends React.Component<{}> {
           status={USER.status}
         />
 
-        <Name>
-          {userName}
-        </Name>
+        <Link to={ACCOUNT}>
+          <Name>
+            {userName}
+          </Name>
+        </Link>
       </UserWrap>
     );
   }
