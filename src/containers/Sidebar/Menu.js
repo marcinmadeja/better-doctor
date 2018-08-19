@@ -12,9 +12,9 @@ type Props = {
 
 const styles = {
   navItem: {
-    color: THEME_COLORS.darkColorText,
+    color: THEME_COLORS.darkText,
     '& svg': {
-      color: THEME_COLORS.darkColorText,
+      color: THEME_COLORS.darkText,
     },
 
     '&.active': {

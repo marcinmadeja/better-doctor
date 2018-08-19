@@ -11,7 +11,7 @@ const styles = {
   drawerPaper: {
     position: 'relative',
     width: SIDEBAR_WIDTH,
-    backgroundColor: THEME_COLORS.darkColor,
+    backgroundColor: THEME_COLORS.dark,
   },
 };
 

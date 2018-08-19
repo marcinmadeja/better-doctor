@@ -6,6 +6,7 @@ import createHistory from 'history/createBrowserHistory';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from 'config/theme';
 import 'normalize.css';
+import './index.css';
 
 import configureStore from './redux-modules/store';
 import Root from './Root/Root';

@@ -52,10 +52,11 @@ const theme = createMuiTheme({
 });
 
 export const COLORS: { [string]: string } = {
-  primaryColor: theme.palette.primary[500],
-  darkColor: DARK_COLORS.main,
+  primary: theme.palette.primary[500],
+  dark: DARK_COLORS.main,
   darkContrast: DARK_COLORS.contrast,
-  darkColorText: DARK_COLORS.text,
+  darkText: DARK_COLORS.text,
+  background: '#e5e9ec',
 };
 
 export const SHADOWS = theme.shadows;
