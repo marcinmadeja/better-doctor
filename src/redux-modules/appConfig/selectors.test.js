@@ -5,7 +5,7 @@ const mockState = {
   appConfig: initialState,
 };
 
-describe('appConfig reducer', () => {
+describe('appConfig selectors', () => {
   it('should return navOpen', () => {
     expect(selectors.getNavOpen(mockState))
       .toEqual(initialState.navOpen);
