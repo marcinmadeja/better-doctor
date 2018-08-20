@@ -16,7 +16,7 @@ const toggleNav = (state: State, payload: ?boolean) => ({
   navOpen: utils.getToggleValue(payload, state.navOpen),
 });
 
-export default(state: State = initialState, action: Action) => {
+export default (state: State = initialState, action: Action) => {
   switch (action.type) {
     case types.TOGGLE_NAV:
       return toggleNav(state, action.payload);
