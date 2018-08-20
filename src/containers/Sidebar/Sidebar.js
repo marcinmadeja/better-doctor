@@ -22,7 +22,7 @@ type Props = {
   }
 };
 
-class Sidebar extends React.Component<Props> {
+export class Sidebar extends React.Component<Props> {
   render() {
     const { classes } = this.props;
 

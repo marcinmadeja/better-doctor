@@ -2,14 +2,14 @@
 
 exports[`Menu should render correctly when proper List passed 1`] = `
 <div
-  className="MuiList-root-2 MuiList-padding-3"
+  className="MuiList-root-1 MuiList-padding-2"
   onBlur={[Function]}
   onKeyDown={[Function]}
   role="menu"
 >
   <a
     aria-current="page"
-    className="MuiButtonBase-root-18 MuiListItem-root-8 MuiListItem-default-11 MuiListItem-gutters-15 MuiListItem-button-16 MuiMenuItem-root-6 Menu-navItem-1 active"
+    className="MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15 MuiMenuItem-root-5 active"
     href="/"
     onBlur={[Function]}
     onClick={[Function]}
@@ -27,19 +27,19 @@ exports[`Menu should render correctly when proper List passed 1`] = `
     tabIndex={-1}
   >
     <span
-      className="MuiListItemIcon-root-21 sc-bdVaJa gguFeu"
+      className="MuiListItemIcon-root-20 sc-bdVaJa gguFeu"
     >
       <span />
     </span>
     Home
     <span
-      className="MuiTouchRipple-root-22"
+      className="MuiTouchRipple-root-21"
     />
   </a>
   <a
     aria-current={null}
-    className="MuiButtonBase-root-18 MuiListItem-root-8 MuiListItem-default-11 MuiListItem-gutters-15 MuiListItem-button-16 MuiMenuItem-root-6 Menu-navItem-1"
-    href="/home"
+    className="MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15 MuiMenuItem-root-5"
+    href="/test"
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -56,13 +56,15 @@ exports[`Menu should render correctly when proper List passed 1`] = `
     tabIndex={-1}
   >
     <span
-      className="MuiListItemIcon-root-21 sc-bdVaJa gguFeu"
+      className="MuiListItemIcon-root-20 sc-bdVaJa gguFeu"
     >
-      <span />
+      <span
+        data-testid="icon"
+      />
     </span>
     Home 2
     <span
-      className="MuiTouchRipple-root-22"
+      className="MuiTouchRipple-root-21"
     />
   </a>
 </div>

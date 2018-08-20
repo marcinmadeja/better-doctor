@@ -1,8 +1,9 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router';
-import Menu from './Menu';
+import Navigation from 'components/Navigation/Navigation';
+import { Menu } from './Menu';
 
-const defaultProps = {};
+const defaultProps = { classes: {}, list: [] };
 const List = [
   {
     exact: true,
@@ -13,18 +14,18 @@ const List = [
   },
   {
     exact: true,
-    path: '/home',
+    path: '/test',
     component: () => <div />,
     name: 'Home 2',
-    icon: <span />,
+    icon: <span data-testid="icon" />,
   },
 ];
 
-const setup = (props = {}) => {
+const setup = (props = {}, initialEntries = '/') => {
   props = { ...defaultProps, ...props };
   const actions = {};
   const component = (
-    <MemoryRouter initialEntries={['/']}>
+    <MemoryRouter initialEntries={[initialEntries]}>
       <Menu {...actions} {...props} />
     </MemoryRouter>
   );
@@ -51,5 +52,14 @@ describe('Menu', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should add active class to path "/test"', () => {
+    const testRoute = List[1];
+    const { component } = setup({ list: List }, testRoute.path);
+    const renderComponent = mount(component);
+    const activeLink = renderComponent.find(Navigation.Item).last().find('.active').last();
+    expect(activeLink.length).toEqual(1);
+    expect(activeLink.text()).toEqual(testRoute.name);
   });
 });

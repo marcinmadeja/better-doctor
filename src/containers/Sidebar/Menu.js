@@ -27,7 +27,7 @@ const styles = {
   },
 };
 
-const Menu = ({ list, classes }: Props) => {
+export const Menu = ({ list, classes }: Props) => {
   return (
     <Navigation>
       {list.map(route => (

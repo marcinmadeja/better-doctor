@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User should match basic snapshot 1`] = `
+.c1 {
+  position: relative;
+  display: inline-block;
+}
+
+.c2 {
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background-color: #0aa699;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12.5px 12.5px;
+  background-color: #22262e;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c3 {
+  margin-left: 15px;
+  color: #ffffff;
+  -webkit-letter-spacing: 0.7px;
+  -moz-letter-spacing: 0.7px;
+  -ms-letter-spacing: 0.7px;
+  letter-spacing: 0.7px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="MuiAvatar-root-2 UserAvatar-bigAvatar-1"
+    >
+      <img
+        alt="John Smith"
+        className="MuiAvatar-img-4"
+        sizes={undefined}
+        src="avatar-photo.jpg"
+        srcSet={undefined}
+      />
+    </div>
+    <div
+      className="c2"
+    />
+  </div>
+  <a
+    href="/account"
+    onClick={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      John Smith
+    </div>
+  </a>
+</div>
+`;
