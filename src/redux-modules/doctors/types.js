@@ -1,7 +1,7 @@
 // @flow strict
-export const DOCTORS_FETCH_REQUEST = '@@data/DOCTORS_FETCH_REQUEST';
-export const DOCTORS_FETCH_SUCCESS = '@@data/DOCTORS_FETCH_SUCCESS';
-export const DOCTORS_FETCH_FAILURE = '@@data/DOCTORS_FETCH_FAILURE';
+export const DOCTORS_FETCH_REQUEST = '@@doctors/DOCTORS_FETCH_REQUEST';
+export const DOCTORS_FETCH_SUCCESS = '@@doctors/DOCTORS_FETCH_SUCCESS';
+export const DOCTORS_FETCH_FAILURE = '@@doctors/DOCTORS_FETCH_FAILURE';
 
 export type DOCTORS_LIST_TYPE = Array<any>;
 

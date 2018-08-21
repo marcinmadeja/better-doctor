@@ -2,7 +2,7 @@ import * as selectors from './selectors';
 import { initialState } from './index';
 
 const mockState = {
-  data: initialState,
+  doctors: initialState,
 };
 
 describe('data selectors', () => {
