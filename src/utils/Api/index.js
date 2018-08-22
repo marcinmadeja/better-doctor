@@ -1,4 +1,4 @@
 import * as apiUtils from './utils';
-import * as apiDoctors from './doctors';
+import * as apiCards from './cards';
 
-export { apiUtils, apiDoctors };
+export { apiUtils, apiCards };
