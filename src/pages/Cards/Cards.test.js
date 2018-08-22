@@ -1,5 +1,5 @@
 import React from 'react';
-import Specialties from './Specialties';
+import Cards from './Cards';
 
 const defaultProps = {
 
@@ -11,8 +11,8 @@ const setup = (props = {}) => {
 
   };
 
-  const component = <Specialties {...actions} {...props} />;
-  const shallowComponent = shallow(<Specialties />);
+  const component = <Cards {...actions} {...props} />;
+  const shallowComponent = shallow(<Cards />);
 
   return {
     actions,
@@ -21,7 +21,7 @@ const setup = (props = {}) => {
   };
 };
 
-describe('Specialties', () => {
+describe('Cards', () => {
   it('should render', () => {
     const { shallowComponent } = setup();
     expect(shallowComponent.exists()).toBe(true);

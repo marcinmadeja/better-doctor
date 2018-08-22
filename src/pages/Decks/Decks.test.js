@@ -1,5 +1,5 @@
 import React from 'react';
-import Practices from './Practices';
+import Decks from './Decks';
 
 const defaultProps = {
 
@@ -11,8 +11,8 @@ const setup = (props = {}) => {
 
   };
 
-  const component = <Practices {...actions} {...props} />;
-  const shallowComponent = shallow(<Practices />);
+  const component = <Decks {...actions} {...props} />;
+  const shallowComponent = shallow(<Decks />);
 
   return {
     actions,
@@ -21,7 +21,7 @@ const setup = (props = {}) => {
   };
 };
 
-describe('Practices', () => {
+describe('Decks', () => {
   it('should render', () => {
     const { shallowComponent } = setup();
     expect(shallowComponent.exists()).toBe(true);

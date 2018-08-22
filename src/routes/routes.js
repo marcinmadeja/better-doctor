@@ -1,23 +1,21 @@
 // @flow strict
 import * as React from 'react';
 import HomePage from 'pages/HomePage/HomePage';
-import Doctors from 'pages/Doctors/Doctors';
-import Practices from 'pages/Practices/Practices';
+import Cards from 'pages/Cards/Cards';
 import Favourite from 'pages/Favourite/Favourite';
 import LeastLiked from 'pages/LeastLiked/LeastLiked';
-import Specialties from 'pages/Specialties/Specialties';
-import Conditions from 'pages/Conditions/Conditions';
-import Insurances from 'pages/Insurances/Insurances';
+import Players from 'pages/Players/Players';
+import Friends from 'pages/Friends/Friends';
+import Decks from 'pages/Decks/Decks';
 import * as routes from 'routes/routeTypes';
 
 import HomeIcon from '@material-ui/icons/Home';
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
-import BusinessIcon from '@material-ui/icons/Business';
+import StyleIcon from '@material-ui/icons/Style';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import PeopleIcon from '@material-ui/icons/People';
+import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 export type Route = {
   exact: boolean,
@@ -37,17 +35,10 @@ export const mainRoutes: Array<Route> = [
   },
   {
     exact: true,
-    path: routes.DOCTORS,
-    component: Doctors,
-    name: 'Doctors',
-    icon: <SupervisorAccountIcon />,
-  },
-  {
-    exact: true,
-    path: routes.PRACTICES,
-    component: Practices,
-    name: 'Practices',
-    icon: <BusinessIcon />,
+    path: routes.CARDS,
+    component: Cards,
+    name: 'Cards',
+    icon: <StyleIcon />,
   },
   {
     exact: true,
@@ -65,23 +56,23 @@ export const mainRoutes: Array<Route> = [
   },
   {
     exact: true,
-    path: routes.SPECIALTIES,
-    component: Specialties,
-    name: 'Specialties',
-    icon: <AssignmentIndIcon />,
+    path: routes.DECKS,
+    component: Decks,
+    name: 'Decks',
+    icon: <AccountBalanceWalletIcon />,
   },
   {
     exact: true,
-    path: routes.CONDITIONS,
-    component: Conditions,
-    name: 'Conditions',
-    icon: <LocalHospitalIcon />,
+    path: routes.PLAYERS,
+    component: Players,
+    name: 'Players',
+    icon: <SupervisorAccountIcon />,
   },
   {
     exact: true,
-    path: routes.INSURANCES,
-    component: Insurances,
-    name: 'Insurances',
-    icon: <AccountBalanceIcon />,
+    path: routes.FRIENDS,
+    component: Friends,
+    name: 'Friends',
+    icon: <PeopleIcon />,
   },
 ];

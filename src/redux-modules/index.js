@@ -1,9 +1,9 @@
 // @flow strict
 import { combineReducers } from 'redux';
 import appConfig from './appConfig';
-import doctors from './doctors';
+import cards from './cards';
 
 export default combineReducers({
   appConfig,
-  doctors,
+  cards,
 });
