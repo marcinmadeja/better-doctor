@@ -1,4 +1,7 @@
 import React from 'react';
+import API from 'utils/Api';
+
+API.cards.getCards();
 
 const HomePage = () => {
   return (

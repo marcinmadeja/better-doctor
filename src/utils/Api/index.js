@@ -1,4 +1,4 @@
-import * as apiUtils from './utils';
-import * as apiCards from './cards';
+import * as utils from './utils';
+import * as cards from './cards';
 
-export { apiUtils, apiCards };
+export default { utils, cards };

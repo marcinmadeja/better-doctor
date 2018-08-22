@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { get } from 'lodash';
 
 export const configureAuth = (requestConfig) => {
   if (!requestConfig.headers) requestConfig.headers = {};
