@@ -1,32 +1,38 @@
+// @flow strict
 import axios from 'axios';
 
-export const configureAuth = (requestConfig) => {
-  if (!requestConfig.headers) requestConfig.headers = {};
+type requestConfigType = {
+  url: string,
+  method: string,
+  headers?: any,
+  params?: any,
+  data?: any,
+};
 
-  requestConfig.headers = {
-    'Access-Control-Expose-Headers': 'location',
-    'Content-Type': 'application/json',
-    ...requestConfig.headers,
-  };
+const configureConfig = (url: string, method: string = 'get', body: any) => {
+  const requestConfig: requestConfigType = { url, method };
+  if (method === 'get') requestConfig.params = body;
+  else requestConfig.data = body;
 
   return requestConfig;
 };
 
 export const request = ({
   url,
-  body,
   method = 'get',
-}) => {
-  const requestConfig = { url, method };
-
-  if (method === 'get') requestConfig.params = body;
-  else requestConfig.data = body;
-
-  return axios(configureAuth(requestConfig))
+  body,
+}: {
+  url: string,
+  body?: any,
+  method?: 'get' | 'post',
+}): mixed => {
+  return axios({
+    ...configureConfig(url, method, body),
+  })
     .catch((error) => Promise.reject(error.response));
 };
 
-export const generateParamsLink = (params) => {
+export const generateParamsLink = (params: { [string]: string }): string => {
   return Object.keys(params)
     .map(param => `${param}=${params[param]}`)
     .join('&');
